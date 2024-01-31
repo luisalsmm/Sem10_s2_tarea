@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>TAREA SEMANA 10 - S2 - LUNES</h1>
+        
+    </header>
+    <main>
+        <h2>EVENTOS</h2>
+        <p> Cualquier interaccion que realiza el usuario con nuestra pagina
+            click , scroll , escribir, hover , etc <br>
+            Tambien puede ser eventos del navegador, como cuando carga la pagina por primera vez
+        
+            <br>// EVENTO O LISTENER
+        
+            <br>// PARTES DE UN LISTENER
+                 <br>1....elemento que emitira el evento
+                 <br>2....tipo de evento a ejecutar
+                 <br>3....callback o funcion para realizar el trabajo <br>
+        
+                <br>EJEMPLO:
+                <br>let documento = document;
+                    <br>    console.log(1);
+                    <br>    documento.addEventListener('DOMContentLoaded', () => {
+                    <br>    console.log(2);
+                    <br>    });
+                    <br>    console.log(3);
+ 
+            
+            <h2>MOUSE</h2>
+            <p>En JavaScript, puedes gestionar eventos del mouse para interactuar con elementos de una página web. 
+                <br>Los eventos del mouse incluyen acciones como hacer clic (click), doble clic (dblclick), mover el mouse (mousemove),
+                <br> presionar un botón del mouse (mousedown) y soltar un botón del mouse (mouseup), entre otros. <br>
+                <br>EJEMPLO: 
+                <br>//Obtén el botón por su ID
+                <br>var boton = document.getElementById("miBoton");
+                
+                <br>//Agrega un evento de clic al botón
+                <br>boton.addEventListener("click", function() {
+                  <br>alert("¡Haz hecho clic en el botón!");
+                <br> });</p>
+            
+            <h2>INPUT</h2>
+            <p>El evento input en JavaScript se utiliza para detectar cambios en un elemento de entrada, como un cuadro de texto (input), 
+                <br> un área de texto (textarea), o un campo de selección (select). Este evento se dispara cuando el contenido de un 
+                <br>elemento de entrada cambia, ya sea mediante la escritura del usuario, pegado de texto, eliminación de texto, etc.
+                <br>
+                <br>EJEMPLO:
+                <br> // Obtén el elemento de entrada por su ID
+                <br>var miInput = document.getElementById("miInput");
+                
+                <br>// Agrega un evento de input al elemento de entrada
+                <br>miInput.addEventListener("input", function() {
+                <br>  // Muestra el contenido del elemento de entrada en la consola
+                <br>  console.log("Contenido del cuadro de texto:", miInput.value);
+                <br> });
+                </p>
+
+            <h2>SCROLL</h2>
+            <p>El evento scroll en JavaScript se utiliza para detectar cuando se realiza un desplazamiento (scroll) en la página web. Este evento 
+                <br>se dispara cuando el usuario desplaza la barra de desplazamiento vertical u horizontal de la ventana del navegador. Puedes utilizar
+                <br> este evento para realizar acciones específicas cuando el usuario se desplaza por la página.
+                <br>
+                EJEMPLO: 
+                <br>// Agrega un evento de scroll al objeto global (la ventana)
+                <br>window.addEventListener("scroll", function() {
+                <br>// Obtiene la posición actual del desplazamiento vertical
+                <br>var posicionScroll = window.scrollY;
+                <br>// Muestra la posición en la consola
+                <br>console.log("Posición del desplazamiento vertical:", posicionScroll);
+                <br> });
+             </p>
+        
+            <h2>EVENT BUBBLING</h2>
+            <p>El burbujeo de eventos es un concepto importante en JavaScript que se refiere al orden en que se manejan los eventos cuando ocurren en un 
+                <br>elemento DOM anidado. En el modelo de eventos de JavaScript, cuando ocurre un evento en un elemento hijo, ese evento se propaga o "burbujea"
+                <br> hacia arriba a través de la cadena de ancestros hasta llegar al elemento raíz (generalmente el document).
+
+
+                <br>EJEMPLO:
+                <br>// Agrega un evento de clic al botón
+                <br>document.getElementById("boton").addEventListener("click", function(event) {
+                  <br>// Muestra un mensaje en la consola
+                  <br>console.log("Evento de clic en el botón");
+                
+                  <br>// Detiene la propagación del evento (comenta esta línea para ver el burbujeo en acción)
+                  <br>// event.stopPropagation();
+                <br> });
+                
+                <br>// Agrega un evento de clic al contenedor
+                <br>document.getElementById("contenedor").addEventListener("click", function() {
+                  <br>// Muestra un mensaje en la consola
+                  <br>console.log("Evento de clic en el contenedor");
+                <br> });
+                
+            </p> 
+            
+
+    </main>
+
+    <footer>
+        <h3>Creado por Luis Lazo</h3>
+    </footer>
+</body>
+</html>
